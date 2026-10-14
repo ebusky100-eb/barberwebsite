@@ -25,7 +25,10 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
+
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -288,32 +291,34 @@ select {
    SERVICES
    ===================================================== */
 
-.services {
+.services-section{
   background: var(--black);
+  padding: 100px 6%;
 }
 
 .services-grid {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
 .service-card {
-  position: relative;
-
+  /* position: relative; */
+  min-width: 0;
   padding: 35px;
 
   background: var(--dark-2);
   border: 1px solid var(--border);
 
-  transition: 0.35s ease;
+  transition: border-color 0.35s ease, transform 0.35s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-5px);
   border-color: rgba(212, 175, 55, 0.5);
 }
 
@@ -371,24 +376,28 @@ select {
 
 .gallery {
   background: var(--black);
+  padding: 100px 6%;
 }
 
 .gallery-grid {
-  width: 1800px;
-  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
 
 .gallery-item {
   position: relative;
+  min-width: 0;
   height: 430px;
   overflow: hidden;
 }
 
 .gallery-item img {
+  display: block;
   width: 100%;
   height: 100%;
 
@@ -714,7 +723,7 @@ select {
 
 
 /* =====================================================
-   MOBILE
+   TABLETS AND SMALLER LAPTOPS
    ===================================================== */
 
 @media (max-width: 900px) {
@@ -749,13 +758,17 @@ select {
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(1, 1fr);
-    width: 600px ;
-    height: 500px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* width: 500px ;
+    height: 1250px; */
+  }
+
+  .gallery-item{
+    height: 350px;
   }
 
   .booking-container {
@@ -764,7 +777,7 @@ select {
   }
 
   .footer-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -772,16 +785,28 @@ select {
 @media (max-width: 600px) {
 
   .section {
-    padding: 75px 5%;
+    padding: 65px 5%;
   }
 
   .navbar {
     height: 70px;
   }
 
+  .nav-links{
+    top: 70px;
+  }
+
+  .nav-container{
+    padding: 0.5%;
+  }
+
+  .logo{
+    font-size: 1.1rem;
+  }
+
   .hero {
     min-height: 90vh;
-    padding: 120px 5% 70px;
+    padding: 110px 5% 70px;
 
     background-position: 60% center;
   }
@@ -796,7 +821,7 @@ select {
 
   .hero-buttons {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .primary-btn,
