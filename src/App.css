@@ -379,6 +379,20 @@ select {
   padding: 100px 6%;
 }
 
+svg{
+  color: var(--gold);
+  border-radius: 5px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+  right: 130px;
+  top: 30px;
+
+}
+
 .gallery-grid {
   width: 100%;
   max-width: 1200px;
@@ -839,16 +853,38 @@ select {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 16px;
+}
 
-  
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4; /* Keeps images nicely proportioned */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-
-  .gallery-item {
-    height: 400px;
-  }
+/* Gradient overlay for caption text */
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 16px 10px 10px 10px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
 
   .why-choose-us{
     padding: 55px 5%;
@@ -875,4 +911,52 @@ select {
     flex-direction: column;
     gap: 10px;
   }
+
+  /* .features-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.feature-card{
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.feature-card h3{
+  margin-bottom: 10px;
+  color: var(--gold-light);
+}
+
+.feature-card p{
+  color: #c8c8c8;
+  line-height: 1.6;
+} */
+
+.why-choose-us{
+  background:
+   
+    url("./assets/image.webp");
+
+  
+
+  background-size: cover;
+  background-position:  center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 80px 6%;
+}
+
+.why-container{
+  max-width: 400px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
 }
