@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Service";
 import Gallery from "./components/Gallery";
 import WhyChooseUs from "./components/WhyChooseUs";
+import Testimonies from "./Testimonies";
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
 
@@ -34,6 +35,7 @@ function App() {
       <Services/>
       <Gallery searchStyle={searchStyle} />
       <WhyChooseUs/>
+      <Testimonies/>
       <Booking />
       <Footer/>
       
