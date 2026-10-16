@@ -21,25 +21,25 @@ function WhyChooseUs(){
                 <div className="features-grid">
 
                     <div className="feature-card">
-                        <div className="icon-box">✂️</div>
+                        <div className="feature-icon">✂️</div>
                         <h3>Skilled Barbers</h3>
                         <p>Careful cuts tailored to your preferred style.</p>
                     </div>
 
                     <div className="feature-card">
-                        <div className="icon-box">🧼</div>
+                        <div className="feature-icon">🧼</div>
                         <h3>Clean & Hygienic</h3>
                         <p>Clean tools and a tidy workspace.</p>
                     </div>
 
                     <div className="feature-card">
-                        <div className="icon-box">🎯</div>
+                        <div className="feature-icon">🎯</div>
                         <h3>Attention to Details</h3>
                         <p>Care with every line and finish.</p>
                     </div>
 
                     <div className="feature-card">
-                        <div className="icon-box">🛋️</div>
+                        <div className="feature-icon">🛋️</div>
                         <h3>Comfortable Space</h3>
                         <p>A welcoming barbershop experience.</p>
                     </div>
