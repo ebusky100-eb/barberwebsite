@@ -3,13 +3,14 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Service";
-import Gallery from "./components/Gallery";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Testimonies from "./Testimonies";
-import Booking from "./components/Booking";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
+
+/*=====================================================
+ IMPORTS FOR PAGES
+===================================================== */
+import ServicePage from "./pages/ServicePage";
+import "./page css/ServicePage.css";
 
 
 import "./App.css";
@@ -28,15 +29,11 @@ function App() {
       />
 
       <Routes>
-        <Route path="/" element={<Hero/>}></Route>
-        
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/services" element={<ServicePage />} />
       </Routes>
-
-      <Services/>
-      <Gallery searchStyle={searchStyle} />
-      <WhyChooseUs/>
-      <Testimonies/>
-      <Booking />
+      
+      
       <Footer/>
       
     </>

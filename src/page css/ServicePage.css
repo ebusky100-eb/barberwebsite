@@ -1,0 +1,536 @@
+
+/* ==============================
+   SERVICE PAGE — GLOBAL LAYOUT
+============================== */
+
+.service-page {
+  background: var(--black);
+  color: var(--white);
+  overflow: clip;
+}
+
+.service-page .section {
+  padding: 100px 6%;
+}
+
+.service-eyebrow {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.service-page-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 100px 8%;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 85% 45%,
+      rgba(212, 175, 55, 0.12),
+      transparent 38%
+    ),
+    linear-gradient(120deg, #090909 35%, #171717 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.service-page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.service-page-hero h1 {
+  margin: 20px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+.service-page-hero h1 span {
+  display: block;
+  color: var(--gold);
+}
+
+.service-page-hero-content > p {
+  max-width: 580px;
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.service-hero-mark {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(212, 175, 55, 0.12);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 700;
+  line-height: 0.85;
+  pointer-events: none;
+}
+
+.service-hero-mark-line {
+  width: 75px;
+  height: 2px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+/* Shared button */
+
+.service-page-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: var(--gold);
+  color: #111;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.service-page-button:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   SECTION HEADINGS
+============================== */
+
+.service-page-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.service-page-heading h2,
+.service-booking-cta h2 {
+  margin: 12px 0 16px;
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+}
+
+.service-page-heading > p,
+.service-booking-cta > p {
+  color: var(--gray);
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+.service-page-heading .service-price-notice {
+  margin-top: 14px;
+  color: var(--gold-light);
+  font-size: 0.82rem;
+}
+
+/* ==============================
+   CATEGORY CARDS
+============================== */
+
+.service-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-category-card {
+  position: relative;
+  min-width: 0;
+  padding: 32px;
+  background: linear-gradient(145deg, #191919, #101010);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-category-card::before,
+.service-category-card::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.service-category-card::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+  border-top-left-radius: 10px;
+}
+
+.service-category-card::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  border-bottom-right-radius: 10px;
+}
+
+.service-category-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.service-card-number {
+  color: var(--gold);
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+}
+
+.service-category-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.service-category-card h3 {
+  margin-bottom: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+}
+
+.service-category-card > p {
+  color: var(--gray);
+  line-height: 1.85;
+  margin-bottom: 22px;
+}
+
+.service-category-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-category-card li {
+  display: flex;
+  gap: 10px;
+  color: #dedede;
+  font-size: 0.9rem;
+}
+
+.service-category-card li::before {
+  content: "✦";
+  color: var(--gold);
+}
+
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.service-card-link:hover {
+  color: var(--gold-light);
+}
+
+/* ==============================
+   DETAILED PRICE LIST
+============================== */
+
+.service-price-section {
+  background: #101010;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-price-list {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 12px 30px;
+  background: #151515;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+}
+
+.service-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.service-price-info {
+  min-width: 0;
+}
+
+.service-price-info h3 {
+  margin-bottom: 7px;
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  font-size: 1.12rem;
+}
+
+.service-price-info p {
+  color: var(--gray);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.service-price-value {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 1.05rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.service-price-footnote {
+  padding: 22px 0 12px;
+  color: var(--gray);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* ==============================
+   BARBER TEAM
+============================== */
+
+.service-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-barber-card {
+  min-width: 0;
+  padding: 30px 24px;
+  text-align: center;
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.service-barber-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.service-barber-avatar {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 22px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #2b2515, #151515 72%);
+  color: var(--gold);
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+}
+
+.service-barber-label {
+  color: var(--gold);
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+}
+
+.service-barber-card h3 {
+  margin: 12px 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+}
+
+.service-barber-specialty {
+  display: block;
+  color: var(--gold-light);
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+
+.service-barber-card > p {
+  margin-top: 18px;
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.service-team-notice {
+  max-width: 700px;
+  margin: 28px auto 0;
+  color: var(--gray);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ==============================
+   BOOKING CTA
+============================== */
+
+.service-booking-cta {
+  padding: 80px 6%;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(212, 175, 55, 0.1),
+      transparent 65%
+    ),
+    #141414;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.service-booking-cta h2 {
+  margin-top: 14px;
+}
+
+.service-booking-cta > p {
+  max-width: 550px;
+  margin: 0 auto 28px;
+}
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 900px) {
+  .service-hero-mark {
+    right: 5%;
+    opacity: 0.5;
+  }
+
+  .service-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+  .service-page .section {
+    padding: 65px 5%;
+  }
+
+  .service-page-hero {
+    min-height: 450px;
+    padding: 75px 6%;
+  }
+
+  .service-page-hero h1 {
+    font-size: clamp(2.3rem, 10vw, 3.3rem);
+  }
+
+  .service-page-hero-content > p {
+    font-size: 0.92rem;
+  }
+
+  .service-hero-mark {
+    right: 3%;
+    font-size: 5rem;
+    opacity: 0.25;
+  }
+
+  .service-page-heading {
+    margin-bottom: 34px;
+  }
+
+  .service-category-grid,
+  .service-team-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .service-category-card {
+    padding: 25px;
+  }
+
+  .service-price-list {
+    padding: 8px 18px;
+  }
+
+  .service-price-row {
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .service-price-info h3 {
+    font-size: 1rem;
+  }
+
+  .service-price-info p {
+    font-size: 0.8rem;
+  }
+
+  .service-price-value {
+    font-size: 0.9rem;
+  }
+
+  .service-booking-cta {
+    padding: 65px 6%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-category-card,
+  .service-barber-card,
+  .service-page-button {
+    transition: none;
+  }
+}
