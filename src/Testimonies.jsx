@@ -25,7 +25,7 @@ const testimonials = [
 function Testimonies(){
     return(
         <section className="testimonials-section">
-            <div className="testimonies-container">
+            <div className="testimonials-container">
 
                 <h2>What Our Clients Say</h2>
 

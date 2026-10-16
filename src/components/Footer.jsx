@@ -57,7 +57,8 @@ function Footer() {
         </p>
 
         <p>
-          Designed & Built with React
+          Designed & Built with React<br></br>
+          And built and designed by "EBUSKY"
         </p>
       </div>
 
