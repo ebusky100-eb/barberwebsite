@@ -7,7 +7,7 @@ const contactLinks = [
     description: "Chat with us directly for enquiries and appointments.",
     icon: "W",
     className: "whatsapp",
-    url: "https://wa.me/2348012345678",
+    url: "https://wa.me/2349036174991",
     button: "Chat on WhatsApp",
   },
   {
