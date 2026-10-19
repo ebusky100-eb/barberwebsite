@@ -13,10 +13,12 @@ import ServicePage from "./pages/ServicePage";
 import GalleryPage from "./pages/GalleryPage"
 import AboutPage from "./pages/AboutPage"
 import BookingPage from "./pages/BookingPage"
+import ContactPage from "./pages/ContactPage";
 import "./page css/ServicePage.css";
 import "./page css/GalleryPage.css";
 import "./page css/AboutPage.css";
 import "./page css/BookingPage.css";
+import "./page css/ContactPage.css";
 
 
 import "./App.css";
@@ -40,6 +42,7 @@ function App() {
         <Route path="/Gallery" element={<GalleryPage/>}/>
         <Route path="/About" element={<AboutPage/>}/>
         <Route path="/Booking" element={<BookingPage/>}/>
+        <Route path="/Contact" element={<ContactPage/>}/>
       </Routes>
       
       
