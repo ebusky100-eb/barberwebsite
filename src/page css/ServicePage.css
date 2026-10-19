@@ -3,12 +3,13 @@
    SERVICE PAGE — GLOBAL LAYOUT
 ============================== */
 
-.service-page {
-  background: var(--black);
-  color: var(--white);
-  overflow: clip;
+.service .section{
+  background: white;
 }
 
+.sservice-team section{
+  background: white;
+}
 .service-page .section {
   padding: 100px 6%;
 }
@@ -382,6 +383,7 @@
   font-family: "Playfair Display", serif;
   font-size: 1.7rem;
 }
+
 
 .service-barber-label {
   color: var(--gold);

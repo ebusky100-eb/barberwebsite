@@ -34,8 +34,8 @@ function Footer() {
           <h3>Contact</h3>
 
           <p>Lagos, Nigeria</p>
-          <p>080 1234 5678</p>
-          <p>hello@bladeandfade.com</p>
+          <p>09036174991</p>
+          <p>blade & fade@gmail.com</p>
 
         </div>
 

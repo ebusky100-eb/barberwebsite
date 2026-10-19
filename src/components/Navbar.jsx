@@ -44,7 +44,7 @@ function Navbar({ searchStyle, setSearchStyle }) {
           </li>
 
           <li>
-            <Link to="" onClick={closeMenu}>About</Link>
+            <Link to="/About" onClick={closeMenu}>About</Link>
           </li>
 
           <li>

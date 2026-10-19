@@ -1,8 +1,4 @@
-const cards = [
-    {
 
-    }
-]
 
 function WhyChooseUs(){
     return(
