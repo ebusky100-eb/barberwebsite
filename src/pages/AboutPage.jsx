@@ -1,5 +1,6 @@
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 
 const values = [
   {
@@ -52,7 +53,7 @@ function AboutPage() {
       <section className="about-story">
         <div className="about-story-image">
           <img
-            src="/images/about/barber-at-work.jpg"
+            src="/images/barber-at-work.jpg"
             alt="Barber carefully working on a client's haircut"
             loading="lazy"
           />

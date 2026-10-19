@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-function Navbar({ searchStyle, setSearchStyle }) {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => {
@@ -59,17 +59,6 @@ function Navbar({ searchStyle, setSearchStyle }) {
             <Link to="/Booking"className="nav-book-btn" onClick={closeMenu}>Book Now</Link>
           </li>
 
-          <li className="search-wrapper">
-            <input
-              type="search"
-              className="search-input"
-              autoFocus
-              placeholder="Search hairstyles..."
-              aria-label="Search hairstyles"
-              value={searchStyle}
-              onChange={(e) => setSearchStyle(e.target.value)}
-            />
-          </li>
         </ul>
       </div>
     </nav>

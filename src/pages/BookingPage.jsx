@@ -37,9 +37,9 @@ const hairstyles = [
 
 const barbers = [
   "Any Available Barber",
-  "Barber 1",
-  "Barber 2",
-  "Barber 3",
+  "Senior Barber",
+  "Grooming Specialist",
+  "Style Barber",
 ];
 
 function BookingPage() {

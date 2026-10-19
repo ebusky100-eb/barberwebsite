@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Booking() {
   const [formData, setFormData] = useState({
@@ -21,6 +22,7 @@ function Booking() {
     alert(
       `Thanks ${formData.name}! Your ${formData.service} appointment request has been received.`
     );
+
 
     setFormData({
       name: "",
@@ -116,7 +118,7 @@ function Booking() {
           </div>
 
           <button type="submit" className="submit-btn">
-            Request Appointment →
+            <Link to="/Booking">Request Appointment →</Link>
           </button>
 
         </form>
