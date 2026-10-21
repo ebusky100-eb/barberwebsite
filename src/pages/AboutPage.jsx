@@ -53,7 +53,7 @@ function AboutPage() {
       <section className="about-story">
         <div className="about-story-image">
           <img
-            src="./src/assets/barber.jpg"
+            src="src/assets/barber.jpg"
             alt="Barber carefully working on a client's haircut"
             loading="lazy"
           />
