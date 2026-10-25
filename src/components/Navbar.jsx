@@ -47,9 +47,6 @@ function Navbar() {
             <Link to="/About" onClick={closeMenu}>About</Link>
           </li>
 
-          <li>
-            <Link to="/Booking" onClick={closeMenu}>Booking</Link>
-          </li>
 
           <li>
             <Link to="/Contact" onClick={closeMenu}>Contact</Link>
